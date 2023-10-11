@@ -1,8 +1,13 @@
-    public class Main{
-        public static void main (String[] args){
-            double base = 5;
-            double altezza = 4;
-            double area = base*altezza;
-            System.out.println(area);
+
+    public class Main {
+        public static void main(String args[]) {
+            char carattere1 = 'H';
+            char carattere2 = 'i';
+
+            String risultato = Character.toString(carattere1) + Character.toString(carattere2);
+
+// Stampa il risultato
+            System.out.println("Risultato: " + risultato);
+
         }
     }
