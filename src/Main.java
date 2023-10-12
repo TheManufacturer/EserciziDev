@@ -1,21 +1,16 @@
 public class Main{
     public static void main(String[] args) {
-
-        int min         = 5;
-        int max         = 10;
-        int valoreConfr = 7;
-        confrontoVal(min,max,valoreConfr);
-
+        int numero = 3;
+        boolean propr= confrontoVal(numero);
+        System.out.println("Il numero "+ numero + " è pari? --> " + propr);
     }
-    public static boolean confrontoVal (int mn, int mx, int cfr){
-        boolean confr= (cfr>=mn && cfr<=mx);
-        System.out.println("Prima var minimo range= " + mn + " Seconda var Massimo range = " + mx + " è nel range ? --> " + confr);
+    public static boolean confrontoVal (int cfr){
+        boolean confr= (cfr %2 ==0) &&true;
         return confr;
     }
 }
 
 /*
-Scrivi un programma che contiene un metodo che dati 2 interi in ingresso ed un valore di confronto
-verifichi se il numero di confronto è compreso tra due valori specifici e stampi il risultato
-dell'operazione comprensivo dei due limiti (inferiore e superiore)
+Scrivi un programma che contiene un metodo che prenda un numero in ingresso
+e capisca se un numero è pari o dispari utilizzando solo gli operatori logici.
 */
