@@ -1,14 +1,19 @@
 
-    public class Main {
-        public static void main(String[] args) {
-            String testo = "Stringa da calcolare";
+public class Main{
 
-            int lunghezza = calcolaLunghezzaStringa(testo);
+    public static void main(String[] args) {
 
-            System.out.println("La lunghezza della stringa è: " + lunghezza);
-        }
+        int dividendo = 10;
+        int divisore = 2;
 
-        public static int calcolaLunghezzaStringa(String str) {
-            return str.length();
-        }
+        System.out.println("Il quoziente è " + divisione(dividendo,divisore));
     }
+    public static double divisione (int a, int b){
+        double quoziente = (double)a/(double)b;
+        return quoziente;
+    }
+
+}
+
+    //Definisci un metodo per la divisione di 2 numeri interi che
+    // restituisca il quoziente che dovrà essere stampato.
