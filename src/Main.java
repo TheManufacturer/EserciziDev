@@ -1,20 +1,21 @@
 
 public class Main{
-
     public static void main(String[] args) {
 
-        int primo   = 10;
-        int secondo = 2;
-        int terzo   = 7;
+        int primo   = 5;
+        int secondo = 3;
 
-        System.out.println("La media è " + media(primo,secondo, terzo));
+        System.out.println("Il risultato incrementato e moltiplicato è " + workStrange(primo,secondo));
     }
-    public static double media (int a, int b, int c){
-        double mediaeff = (double)(a+b+c)/3;
-        return mediaeff;
+    public static double workStrange (int a, int b){
+        a=a+1;
+        System.out.println(a); // vediamo l'incremento di a
+        b=b+2;
+        System.out.println(b); // vediamo l'incremento di b
+        int workato=a*b;
+        return workato;
     }
-
 }
 
-//  Definisci un metodo che calcoli la media tra 3 numeri e
-//  restituisca il risultato che dovrà essere stampato.
+//  Scrivi un programma che contiene un metodo che date due variabili
+//  le incrementi di un valore scelto da te e le moltiplichi fra di loro.
