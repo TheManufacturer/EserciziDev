@@ -1,16 +1,15 @@
 
     public class Main {
         public static void main(String[] args) {
-            char carattere1 = 'A';
-            char carattere2 = 'B';
+            int numero1 = 5;
+            int numero2 = 7;
 
-            int valoreAscii1 = (int) carattere1;
-            int valoreAscii2 = (int) carattere2;
+            int risultato = somma(numero1, numero2);
 
-            int sommaValoriAscii = valoreAscii1 + valoreAscii2;
+            System.out.println("La somma di " + numero1 + " e " + numero2 + " è: " + risultato);
+        }
 
-            System.out.println("Valore ASCII di " + carattere1 + ": " + valoreAscii1);
-            System.out.println("Valore ASCII di " + carattere2 + ": " + valoreAscii2);
-            System.out.println("Somma dei valori ASCII: " + sommaValoriAscii);
+        public static int somma(int a, int b) {
+            return a + b;
         }
     }
