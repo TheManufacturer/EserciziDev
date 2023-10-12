@@ -1,17 +1,21 @@
 public class Main{
     public static void main(String[] args) {
 
-        char primo   = 'a';
-        char secondo = 'b';
-        confrontoChar(primo,secondo);
+        int min         = 5;
+        int max         = 10;
+        int valoreConfr = 7;
+        confrontoVal(min,max,valoreConfr);
 
     }
-    public static boolean confrontoChar (char a, char b){
-        boolean confr= a==b;
-        System.out.println("Prima var = " + a + " Seconda var = " + b + " Sono Uguali ? --> " + confr);
+    public static boolean confrontoVal (int mn, int mx, int cfr){
+        boolean confr= (cfr>=mn && cfr<=mx);
+        System.out.println("Prima var minimo range= " + mn + " Seconda var Massimo range = " + mx + " è nel range ? --> " + confr);
         return confr;
     }
 }
 
-//  Scrivi un programma che contiene un metodo che che confronti due caratteri e determini se sono diversi.
-//  Il programma dovrà stampare a video i due caratteri e il risultato dell'eguaglianza.
+/*
+Scrivi un programma che contiene un metodo che dati 2 interi in ingresso ed un valore di confronto
+verifichi se il numero di confronto è compreso tra due valori specifici e stampi il risultato
+dell'operazione comprensivo dei due limiti (inferiore e superiore)
+*/
