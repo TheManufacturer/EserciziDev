@@ -1,20 +1,17 @@
 public class Main{
     public static void main(String[] args) {
 
-        int primo   = 5;
-        int secondo = 3;
+        char primo   = 'a';
+        char secondo = 'b';
+        confrontoChar(primo,secondo);
 
-        System.out.println("Il risultato incrementato e moltiplicato è " + workStrange(primo,secondo));
     }
-    public static double workStrange (int a, int b){
-        a=a+1;
-        System.out.println(a); // vediamo l'incremento di a
-        b=b+2;
-        System.out.println(b); // vediamo l'incremento di b
-        int workato=a*b;
-        return workato;
+    public static boolean confrontoChar (char a, char b){
+        boolean confr= a==b;
+        System.out.println("Prima var = " + a + " Seconda var = " + b + " Sono Uguali ? --> " + confr);
+        return confr;
     }
 }
 
-//  Scrivi un programma che contiene un metodo che date due variabili
-//  le incrementi di un valore scelto da te e le moltiplichi fra di loro.
+//  Scrivi un programma che contiene un metodo che che confronti due caratteri e determini se sono diversi.
+//  Il programma dovrà stampare a video i due caratteri e il risultato dell'eguaglianza.
