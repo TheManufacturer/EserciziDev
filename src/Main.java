@@ -1,15 +1,14 @@
 
     public class Main {
         public static void main(String[] args) {
-            int numero1 = 5;
-            int numero2 = 7;
+            String testo = "Stringa da calcolare";
 
-            int risultato = somma(numero1, numero2);
+            int lunghezza = calcolaLunghezzaStringa(testo);
 
-            System.out.println("La somma di " + numero1 + " e " + numero2 + " è: " + risultato);
+            System.out.println("La lunghezza della stringa è: " + lunghezza);
         }
 
-        public static int somma(int a, int b) {
-            return a + b;
+        public static int calcolaLunghezzaStringa(String str) {
+            return str.length();
         }
     }
