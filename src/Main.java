@@ -1,13 +1,16 @@
 
     public class Main {
         public static void main(String[] args) {
-            double numero1 = 2.5;
-            double numero2 = 7.5;
+            char carattere1 = 'A';
+            char carattere2 = 'B';
 
-            double somma = numero1 + numero2;
+            int valoreAscii1 = (int) carattere1;
+            int valoreAscii2 = (int) carattere2;
 
-            int risultatoSenzaVirgola = (int) somma;
+            int sommaValoriAscii = valoreAscii1 + valoreAscii2;
 
-            System.out.println("Somma senza virgola: " + risultatoSenzaVirgola);
+            System.out.println("Valore ASCII di " + carattere1 + ": " + valoreAscii1);
+            System.out.println("Valore ASCII di " + carattere2 + ": " + valoreAscii2);
+            System.out.println("Somma dei valori ASCII: " + sommaValoriAscii);
         }
     }
