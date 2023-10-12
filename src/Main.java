@@ -1,13 +1,13 @@
 
     public class Main {
-        public static void main(String args[]) {
-            char carattere1 = 'H';
-            char carattere2 = 'i';
+        public static void main(String[] args) {
+            double numero1 = 2.5;
+            double numero2 = 7.5;
 
-            String risultato = Character.toString(carattere1) + Character.toString(carattere2);
+            double somma = numero1 + numero2;
 
-// Stampa il risultato
-            System.out.println("Risultato: " + risultato);
+            int risultatoSenzaVirgola = (int) somma;
 
+            System.out.println("Somma senza virgola: " + risultatoSenzaVirgola);
         }
     }
