@@ -1,24 +1,18 @@
-import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        printArray();
 
-        System.out.println("dammi il numero (il programma si interrompe con 5) ");
-        int numero= scanner.nextInt();
-
-        printWithJump(numero);
-
-        scanner.close();
     }
 
-    public static void printWithJump(int num) {
+    public static void printArray() {
+        int somma=0;
+        int[] numero=new int[10];
 
-        for( int i=1; i<=num; i++){
-            if(i==5) {
-                continue;
-            }
-            System.out.println(i);
+        for( int i=0; i<10; i++){
+            numero[i]=i + 1;
+            somma= somma +numero[i];
         }
+        System.out.println("la somma dei numeri contenuti nell'array --> " + somma);
 
     }
 
@@ -26,7 +20,8 @@ public class Main {
 
 
 /*
-Scrivi un programma che contenga un metodo che prende in ingresso
-un valore numerico e stampa tutti i numeri fino al valore immesso,
-la stampa dovrà saltare il valore uguale a 5.
+Scrivi un programma che contenga un metodo che crea un array
+lo riempie con i numeri da 1 a 10
+che che calcoli la somma dei numeri contenuti nell'array inizializzato
+e la stampi a video.
  */
