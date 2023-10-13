@@ -14,27 +14,19 @@ public class Main {
     public static void printWithBreak(int num) {
 
         for( int i=1; i<=num; i++){
-            System.out.println(i);
             if(i==5) {
-                break;
+                continue;
             }
+            System.out.println(i);
         }
 
     }
 
 }
 
-/*
-Scrivi un programma che contenga un metodo che prende in ingresso un valore numerico
-stampa tutti i numeri fino al valore immesso,
-la stampa dovrà interrompersi se il valore è uguale a 5.
- */
 
-/* Poquito help --necessario che sto tirando a tavoletta da 48h xD
-        for (int i = 1; i <= 10; i++) {
-            if (i % 2 == 0) {
-                System.out.println("Numero pari trovato: " + i);
-                break; // Usciamo dal ciclo
-            }
-        }
-*/
+/*
+Scrivi un programma che contenga un metodo che prende in ingresso
+un valore numerico e stampa tutti i numeri fino al valore immesso,
+la stampa dovrà saltare il valore uguale a 5.
+ */
