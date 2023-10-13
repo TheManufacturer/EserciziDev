@@ -2,33 +2,26 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("dammi il valore");
+        int valore= scanner.nextInt();
+        esegMolt(valore);
 
-        System.out.println("dammi il numero da analizzare ");
-        int numero= scanner.nextInt();
-
-        System.out.println("quanti risultati vuoi ottenere?");
-        int risultati= scanner.nextInt();
-
-        esegCalc(numero, risultati);
-
-        scanner.close();
     }
 
-    public static void esegCalc(int num,int lim) {
-
-        for( int i=num; i>0 && lim>0; i--){
-            System.out.println(i);
-            lim--;
+    public static void esegMolt(int val) {
+        int molt;
+        for(int i=1; i<=10; i++){
+            molt=val * i;
+            System.out.println(val + " x " + i + "= " + molt);
         }
-
     }
 
 }
 
 /*
-Scrivi un programma che contenga un metodo che prende in ingresso un numero
-e il massimo numero di risultati che vuoi avere e stampi tutti i numeri naturali
-in ordine inverso
-(Quindi se passo il punto di partenza a 6 e gli dico di restituirmi 3 risultati
-mi aspetto in uscita [6 5 4] stampati).
+Scrivi un programma che contenga
+un metodo che prende in ingresso un valore numerico
+e restituisca la tabellina aritmetica di quel numero
+che dovrà essere stampata a video.
+#SonoLentissimooo XD
  */
