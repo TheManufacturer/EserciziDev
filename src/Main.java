@@ -1,32 +1,24 @@
 public class Main {
-    public static void main(String args[]) {
-        char mathOperation = 'a';
-        numberForDay(mathOperation);
+    public static void main(String[] args) {
+        int limite = 5;
+        int somma=0;
+        System.out.println(stampaSomma(limite));
     }
 
-    public static void numberForDay(char oper) {
-        switch (oper){
-            case 'a':
-                System.out.println("Addizione");
-                break;
-            case 's':
-                System.out.println("Sottrazione");
-                break;
-            case 'm':
-                System.out.println("Moltiplicazione");
-                break;
-            case 'd':
-                System.out.println("Divisione");
-                break;
-            default:
-                System.out.println("Sei sicuro di aver inserito un valore corretto? [a-s-m-d]");
+    public static int stampaSomma(int lim) {
+        int max=1;
+        int som=0;
+        while(max<lim){
+            som=som+max;
+            max++;
         }
+        return som;
     }
-
 }
 
 /*
-Scrivi un programma che contenga un metodo che prende in ingresso un carattere
-e ne identifica il tipo per un operazione di algebra (+ addizione - sottrazione * moltiplicazione / divisione).
-Nel caso non riesca ad identificare il tipo di operazione dovrà restituire una stringa di errore.
+Scrivere un programma che contenga un metodo che sfrutti il while loop
+e prenda in ingresso 1 valore intero come limite superiore e
+calcoli la somma di tutti i valori prima del limite e la stampi a video.
+(Esempio passo 5 come limite e otterrò la somma di 1 + 2 + 3 + 4)
 */
