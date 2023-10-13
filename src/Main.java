@@ -1,27 +1,28 @@
 public class Main {
-    public static void main(String[] args) {
-        stampaNumeri(100);                                  //chiamiamo il metodo 100 volte -contatore
+    public static void main(String args[]) {
+        String stringToWork = "Questa è la stringa che analizzeremo";
+        int lenght = stringToWork.length();
+        controlloLung(lenght);
     }
 
-    public static void stampaNumeri(int numero) {                  //creazione metodo [passaggio var numero ("num chiamate metodo")]
-        if (numero > 0) {                                          //controllo per avviare una sorta di ciclo
-            stampaNumeri(numero - 1);                      //creazione decremento per contatore
-            if (numero % 3 == 0 && numero % 5 == 0) {             //Condizione multiplo di entrambi (5-3)
-                System.out.println("FizzBuzz");                   //stampa
-            } else if (numero % 3 == 0) {                         //Condizione multiplo di 3
-                System.out.println("Fizz");                       //stampa
-            } else if (numero % 5 == 0) {                         //Condizione multiplo di 5
-                System.out.println("Buzz");                       //stampa
-            } else {
-                System.out.println(numero);
-            }
+    public static void controlloLung(int b) {
+        if ( b >10) {
+            System.out.println("Lunghezza maggiore di 10");
+        } else if (b<10) {
+            System.out.println("Lunghezza minore di 10");
+        }else if (b == 10){
+            System.out.println("Lunghezza pari a 10");
         }
     }
 
 }
 /*
-Scrivere un programma che stampi i numeri da 1 a 100.
-Per i multipli di 3 stampi "Fizz" al posto del numero,
-Per i multipli di 5 stampi "Buzz",
-Nel caso in cui un numero sia multiplo di entrambi stampi "FizzBuzz".
+Scrivi un programma che calcoli la lunghezza di una stringa,
+sulla base di questa lunghezza stampi "Lunghezza maggiore di 10",
+"Lunghezza minore di 10" o "Lunghezza pari a 10".
+
+Test:
+    "Questa è la stringa che analizzeremo"      --> OK
+    "iosononano"                                --> OK
+    "Mario"                                     --> OK
 */
