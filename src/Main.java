@@ -1,28 +1,41 @@
 public class Main {
     public static void main(String args[]) {
-        String stringToWork = "Questa è la stringa che analizzeremo";
-        int lenght = stringToWork.length();
-        controlloLung(lenght);
+        int number = 0;
+        numberForDay(number);
     }
 
-    public static void controlloLung(int b) {
-        if ( b >10) {
-            System.out.println("Lunghezza maggiore di 10");
-        } else if (b<10) {
-            System.out.println("Lunghezza minore di 10");
-        }else if (b == 10){
-            System.out.println("Lunghezza pari a 10");
+    public static void numberForDay(int n) {
+        switch (n){
+            case 1:
+                System.out.println("Lunedì");
+                break;
+            case 2:
+                System.out.println("Martedì");
+                break;
+            case 3:
+                System.out.println("Mercoledì");
+                break;
+            case 4:
+                System.out.println("Giovedì");
+                break;
+            case 5:
+                System.out.println("Venerdì");
+                break;
+            case 6:
+                System.out.println("Sabato");
+                break;
+            case 7:
+                System.out.println("Domenica");
+                break;
+            default:
+                System.out.println("Sei sicuro di aver inserito un valore corretto? [1-7]");
         }
     }
 
 }
-/*
-Scrivi un programma che calcoli la lunghezza di una stringa,
-sulla base di questa lunghezza stampi "Lunghezza maggiore di 10",
-"Lunghezza minore di 10" o "Lunghezza pari a 10".
 
-Test:
-    "Questa è la stringa che analizzeremo"      --> OK
-    "iosononano"                                --> OK
-    "Mario"                                     --> OK
+/*
+Scrivi un programma che contenga un metodo che prende in ingresso un valore numerico
+e restituisca il nome del giorno della settimana come stringa o una stringa di errore
+nel caso di valore maggiore di 7 o minore di 1.
 */
