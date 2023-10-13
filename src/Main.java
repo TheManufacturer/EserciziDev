@@ -1,16 +1,27 @@
-public class Main{
+public class Main {
     public static void main(String[] args) {
-        int numero = 3;
-        boolean propr= confrontoVal(numero);
-        System.out.println("Il numero "+ numero + " è pari? --> " + propr);
+        stampaNumeri(100);                                  //chiamiamo il metodo 100 volte -contatore
     }
-    public static boolean confrontoVal (int cfr){
-        boolean confr= (cfr %2 ==0) &&true;
-        return confr;
-    }
-}
 
+    public static void stampaNumeri(int numero) {                  //creazione metodo [passaggio var numero ("num chiamate metodo")]
+        if (numero > 0) {                                          //controllo per avviare una sorta di ciclo
+            stampaNumeri(numero - 1);                      //creazione decremento per contatore
+            if (numero % 3 == 0 && numero % 5 == 0) {             //Condizione multiplo di entrambi (5-3)
+                System.out.println("FizzBuzz");                   //stampa
+            } else if (numero % 3 == 0) {                         //Condizione multiplo di 3
+                System.out.println("Fizz");                       //stampa
+            } else if (numero % 5 == 0) {                         //Condizione multiplo di 5
+                System.out.println("Buzz");                       //stampa
+            } else {
+                System.out.println(numero);
+            }
+        }
+    }
+
+}
 /*
-Scrivi un programma che contiene un metodo che prenda un numero in ingresso
-e capisca se un numero è pari o dispari utilizzando solo gli operatori logici.
+Scrivere un programma che stampi i numeri da 1 a 100.
+Per i multipli di 3 stampi "Fizz" al posto del numero,
+Per i multipli di 5 stampi "Buzz",
+Nel caso in cui un numero sia multiplo di entrambi stampi "FizzBuzz".
 */
