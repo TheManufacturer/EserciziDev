@@ -6,12 +6,12 @@ public class Main {
         System.out.println("dammi il numero (il programma si interrompe con 5) ");
         int numero= scanner.nextInt();
 
-        printWithBreak(numero);
+        printWithJump(numero);
 
         scanner.close();
     }
 
-    public static void printWithBreak(int num) {
+    public static void printWithJump(int num) {
 
         for( int i=1; i<=num; i++){
             if(i==5) {
