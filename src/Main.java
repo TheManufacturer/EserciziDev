@@ -1,27 +1,38 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        printArray();
+        int contatoreA=0;
+        char[] vector = new char[10];
+        Random random = new Random();
 
-    }
-
-    public static void printArray() {
-        int somma=0;
-        int[] numero=new int[10];
-
-        for( int i=0; i<10; i++){
-            numero[i]=i + 1;
-            somma= somma +numero[i];
+        // Riempire il vettore con caratteri casuali
+        for (int i = 0; i < 10; i++) {
+            char randomChar = (char) (random.nextInt(26) + 'a'); // Genera una lettera minuscola casuale
+            if(randomChar!='a') {
+                vector[i] = randomChar;
+            }else{
+                vector[i] = randomChar;
+                contatoreA++;
+            }
         }
-        System.out.println("la somma dei numeri contenuti nell'array --> " + somma);
 
+        System.out.println("Riscontrato char < a > -->" + contatoreA);
+
+
+        // Stampa il vettore
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Elemento " + (i+1) + ": " + vector[i]);
+        }
+        System.out.println(contatoreA);
     }
-
 }
+
 
 
 /*
 Scrivi un programma che contenga un metodo che crea un array
-lo riempie con i numeri da 1 a 10
-che che calcoli la somma dei numeri contenuti nell'array inizializzato
-e la stampi a video.
+lo riempie con dei caratteri.
+Questo metodo dovrà poi stampare tutte le occorrenze del carattere
+ -->  'a' oppure--> 0 [in caso non ce ne siano].
  */
