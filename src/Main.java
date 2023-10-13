@@ -3,22 +3,21 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("dammi il numero da analizzare ");
+        System.out.println("dammi il numero (il programma si interrompe con 5) ");
         int numero= scanner.nextInt();
 
-        System.out.println("quanti risultati vuoi ottenere?");
-        int risultati= scanner.nextInt();
-
-        esegCalc(numero, risultati);
+        printWithBreak(numero);
 
         scanner.close();
     }
 
-    public static void esegCalc(int num,int lim) {
+    public static void printWithBreak(int num) {
 
-        for( int i=num; i>0 && lim>0; i--){
+        for( int i=1; i<=num; i++){
             System.out.println(i);
-            lim--;
+            if(i==5) {
+                break;
+            }
         }
 
     }
@@ -26,9 +25,16 @@ public class Main {
 }
 
 /*
-Scrivi un programma che contenga un metodo che prende in ingresso un numero
-e il massimo numero di risultati che vuoi avere e stampi tutti i numeri naturali
-in ordine inverso
-(Quindi se passo il punto di partenza a 6 e gli dico di restituirmi 3 risultati
-mi aspetto in uscita [6 5 4] stampati).
+Scrivi un programma che contenga un metodo che prende in ingresso un valore numerico
+stampa tutti i numeri fino al valore immesso,
+la stampa dovrà interrompersi se il valore è uguale a 5.
  */
+
+/* Poquito help --necessario che sto tirando a tavoletta da 48h xD
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 == 0) {
+                System.out.println("Numero pari trovato: " + i);
+                break; // Usciamo dal ciclo
+            }
+        }
+*/
