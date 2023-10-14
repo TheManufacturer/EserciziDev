@@ -1,4 +1,4 @@
-public class Main {
+    public class Main {
     public static void main(String[] args) {
         int[][] matrix =
                 {
@@ -6,20 +6,32 @@ public class Main {
                         {6, 7, 8, 9, 10},
                         {11, 12, 13, 14, 15}
                 };
-        int n = matrix.length;
-        int m = matrix[0].length;
-        int sommaPrimaRiga = 0;
 
-        for (int riga = 0; riga < n; riga++) {
-            for (int colonna = 0; colonna < m; colonna++) {
+        stampaMatrice(matrix);                     // Stampare la matrice
+
+        int sommaPrimaRiga = sommaPrimaRiga(matrix);
+        System.out.println("La somma della prima riga è --> " + sommaPrimaRiga);
+
+    }
+
+    public static int sommaPrimaRiga(int[][] matrix) {
+        int somma = 0;
+        for (int colonna = 0; colonna < matrix[0].length; colonna++) {
+            somma += matrix[0][colonna];
+        }
+        return somma;
+    }
+
+    public static void stampaMatrice(int[][] matrix) {
+        for (int riga = 0; riga < matrix.length; riga++) {
+            for (int colonna = 0; colonna < matrix[0].length; colonna++) {
                 System.out.print(matrix[riga][colonna] + " ");
-                sommaPrimaRiga=+matrix[riga][colonna];
             }
             System.out.println();
         }
-        System.out.println("La somma della prima riga è --> " + sommaPrimaRiga);
     }
 }
+
 
 /*
 Scrivere un programma che contenga un metodo che:
