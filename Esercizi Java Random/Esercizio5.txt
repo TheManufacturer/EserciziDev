@@ -1,0 +1,27 @@
+public class Main {
+    public static void main(String[] args) {
+        stampaNumeri(100);                                  //chiamiamo il metodo 100 volte -contatore
+    }
+
+    public static void stampaNumeri(int numero) {                  //creazione metodo [passaggio var numero ("num chiamate metodo")]
+        if (numero > 0) {                                          //controllo per avviare una sorta di ciclo
+            stampaNumeri(numero - 1);                      //creazione decremento per contatore
+            if (numero % 3 == 0 && numero % 5 == 0) {             //Condizione multiplo di entrambi (5-3)
+                System.out.println("FizzBuzz");                   //stampa
+            } else if (numero % 3 == 0) {                         //Condizione multiplo di 3
+                System.out.println("Fizz");                       //stampa
+            } else if (numero % 5 == 0) {                         //Condizione multiplo di 5
+                System.out.println("Buzz");                       //stampa
+            } else {
+                System.out.println(numero);
+            }
+        }
+    }
+
+}
+/*
+Scrivere un programma che stampi i numeri da 1 a 100.
+Per i multipli di 3 stampi "Fizz" al posto del numero,
+Per i multipli di 5 stampi "Buzz",
+Nel caso in cui un numero sia multiplo di entrambi stampi "FizzBuzz".
+*/

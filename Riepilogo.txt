@@ -1,0 +1,144 @@
+Le istruzioni condizionali "if" e "else" consentono di eseguire 
+		diverse azioni in base al verificarsi di una condizione.
+
+int numero = 10;
+if (numero > 5) {
+    System.out.println("Il numero è maggiore di 5.");
+} else {
+    System.out.println("Il numero non è maggiore di 5.");
+}
+
+------
+
+
+Gli operatori logici (come "&&" per l'AND e "||" per l'OR) e quelli relazionali (come ">" per maggiore di) 
+sono utilizzati per eseguire confronti logici.
+
+int eta = 25;
+boolean maggiorenne = eta >= 18 && eta <= 65;
+
+-----
+Switch: L'istruzione "switch" consente di selezionare uno dei molti blocchi di codice 
+	in base al valore di una variabile.
+
+char voto = 'A';
+
+switch (voto) {
+    case 'A':
+        System.out.println("Ottimo");
+        break;
+    case 'B':
+        System.out.println("Buono");
+        break;
+    default:
+        System.out.println("Sconosciuto");
+
+}
+
+-----
+Cicli (for, while, do-while): I cicli "for," "while," e "do-while" consentono di eseguire 
+	un blocco di codice ripetutamente fino a quando una condizione specificata è soddisfatta.
+
+*FOR*
+for (int i = 1; i <= 5; i++) {
+    System.out.println("Iterazione " + i);
+}
+
+*WHILE*
+int contatore = 0;
+while (contatore < 3) {
+    System.out.println("Iterazione " + contatore);
+    contatore++;
+}
+
+*DO-WHILE*
+int n = 0;
+do {
+    System.out.println("Iterazione " + n);
+    n++;
+} while (n < 2);
+
+-----
+
+Vettori: Un vettore è una struttura dati che contiene una serie di elementi. Qui vedrai come dichiarare,
+	 inizializzare e accedere agli elementi di un vettore.
+
+int[] numeri = new int[3];
+numeri[0] = 1;
+numeri[1] = 2;
+numeri[2] = 3;
+
+for (int i = 0; i < numeri.length; i++) {
+    System.out.println("Elemento " + i + ": " + numeri[i]);
+
+}
+
+In questo codice, viene creato un vettore di interi chiamato "numeri" con tre elementi 
+	 successivamente scansionato con un ciclo "for" per stampare ciascun elemento 
+		ed il suo indice all'interno del vettore.
+
+Stamperà 1 2 3 come elementi
+Stamperà 0 1 2 come indice (I vettori partono da 0, quindi un vettore con 10 elementi avrà come ultimo i (indice) 9).
+
+-----
+Per quanto riguarda le interfacce...
+
+Es: 
+
+Nel Main la crei...
+
+interface Saluto {
+    void saluta();
+}
+
+In una classe che hai creato (meglio un file tipo Salutatore.java in questo caso), la implementi...
+ 
+class Salutatore implements Saluto {
+    public void saluta() {
+        System.out.println("Ciao!");
+    }
+}
+
+-----
+MAIN
+
+public class Main {
+
+public class Main {
+    public static void main(String[] args) {
+        // Creazione di una forma Cerchio con raggio 5.0
+        Forma forma = new Cerchio(5.0);
+
+        // Chiamata al metodo astratto calcolaArea() sulla forma
+        double area = forma.calcolaArea();
+
+        // Stampa dell'area calcolata del cerchio
+        System.out.println("L'area del cerchio è: " + area);
+    }
+}
+
+// Definizione di una classe astratta
+abstract class Forma {
+    // Metodo astratto per calcolare l'area
+    public abstract double calcolaArea();
+}
+
+// Sottoclasse che estende la classe astratta Forma
+class Cerchio extends Forma {
+    private double raggio;
+
+    public Cerchio(double raggio) {
+        this.raggio = raggio;
+    }
+
+    // Implementazione del metodo astratto
+    @Override
+    public double calcolaArea() {
+        return Math.PI * raggio * raggio;
+    }
+}
+
+
+-----
+
+
